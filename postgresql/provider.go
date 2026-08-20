@@ -228,7 +228,7 @@ func Provider() *schema.Provider {
 				Type:        schema.TypeBool,
 				Optional:    true,
 				Default:     false,
-				Description: "Use binary_parameters connection option to avoid prepared statements. Required when connecting through connection poolers like Odyssey in TRANSACTION mode.",
+				Description: "Pass binary_parameters=yes to lib/pq. This can improve compatibility with transaction-pooling proxies by enabling single-round-trip execution for non-prepared parameterized queries.",
 			},
 		},
 
